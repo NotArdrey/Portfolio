@@ -80,6 +80,14 @@ a {
   margin-bottom: 1rem;
 }
 
+.project-header h3 {
+  flex: 1;                     
+  min-width: 0;              
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .contact-icon {
   display: block;
   font-size: 2rem;
@@ -176,7 +184,6 @@ a {
   text-overflow: ellipsis;
   color: #111;
   margin-bottom: 0.5rem;
-  max-width: 80%;
 }
 .project-card p {
   color: #444;
@@ -309,4 +316,5 @@ a {
     font-size: 0.95rem;
   }
 }
+
 
