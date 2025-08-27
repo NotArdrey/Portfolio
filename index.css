@@ -309,6 +309,12 @@ a {
   border-top: 1px solid #ddd;
 }
 
+@media (min-width: 1200px) {
+  .projects-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 @media (max-width: 768px) {
   .hero h1 {
     font-size: 2rem;
@@ -317,6 +323,7 @@ a {
     font-size: 0.95rem;
   }
 }
+
 
 
 
