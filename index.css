@@ -176,6 +176,7 @@ a {
   text-overflow: ellipsis;
   color: #111;
   margin-bottom: 0.5rem;
+  max-width: 80%;
 }
 .project-card p {
   color: #444;
@@ -308,3 +309,4 @@ a {
     font-size: 0.95rem;
   }
 }
+
