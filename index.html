@@ -9,195 +9,211 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="index.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            poppins: ['Poppins', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-</head>
-<body>
 
-  <header class="header">
-    <nav class="nav">
-      <ul>
-        <li><a href="#projects">projects</a></li>
-        <li><a href="#technologies">skills</a></li>
-        <li><a href="#contact">contact</a></li>
+  <style>
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+<body class="font-poppins bg-white text-gray-900 leading-relaxed">
+
+  <header class="flex justify-center items-center px-8 py-4 border-b border-gray-300">
+    <nav>
+      <ul class="flex list-none gap-6">
+        <li><a href="#projects" class="text-gray-700 capitalize font-medium hover:text-black">projects</a></li>
+        <li><a href="#technologies" class="text-gray-700 capitalize font-medium hover:text-black">skills</a></li>
+        <li><a href="#contact" class="text-gray-700 capitalize font-medium hover:text-black">contact</a></li>
       </ul>
     </nav>
   </header>
 
   <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Neil Ardrey Laza</h1>
-      <p class="hero-description">
+  <section class="flex justify-center items-center px-8 py-16 text-center bg-gray-100">
+    <div class="max-w-2xl">
+      <h1 class="text-4xl md:text-5xl font-semibold text-gray-900 mb-4">Neil Ardrey Laza</h1>
+      <p class="text-base text-gray-600 mb-8 text-center">
         A 20-year-old aspiring software developer with a growing passion for mobile and web technologies. Currently serving as the Mobile Dev Assistant Lead at GDG-OC NU Baliwag and the Chief Relations Officer at AWSCC NU Baliwag.
       </p>
-      <div class="hero-buttons">
-        <a href="#contact" class="btn btn-primary">get in touch</a>
-        <a href="Neil Ardrey Laza - Resume.pdf" class="btn btn-outline" download>resume</a>
+      <div class="flex gap-4 justify-center flex-wrap">
+        <a href="#contact" class="inline-block px-6 py-3 rounded border-2 border-gray-700 text-gray-700 font-medium text-center bg-transparent transition-colors duration-300 hover:bg-gray-700 hover:text-white">get in touch</a>
+        <a href="Neil Ardrey Laza - Resume.pdf" class="inline-block px-6 py-3 rounded border-2 border-gray-700 text-gray-700 font-medium text-center bg-transparent transition-colors duration-300 hover:bg-gray-700 hover:text-white" download>resume</a>
       </div>
     </div> 
   </section>
   
   <!-- Projects Section -->
-  <section class="projects-section" id="projects">
-    <h2>PROJECTS</h2>
-    <div class="projects-grid">
+  <section class="px-8 py-16 max-w-6xl mx-auto text-center" id="projects">
+    <h2 class="text-3xl font-semibold text-gray-900 mb-8">PROJECTS</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 auto-rows-fr">
 
-    <div class="project-card">
-        <div class="project-header">
-          <h3>iBarangay</h3>
-          <a href="https://github.com/NotArdrey/iBarangay" target="_blank" class="project-github-link">
+      <div class="bg-white border border-gray-200 rounded-lg p-6 transition-shadow duration-300 hover:shadow-lg flex flex-col">
+        <div class="flex justify-between items-center mb-4">
+          <h3 class="font-semibold text-gray-900 leading-snug">iBarangay</h3>
+          <a href="https://github.com/NotArdrey/iBarangay" target="_blank" class="inline-flex items-center justify-center text-2xl text-gray-700 transition-colors duration-300 hover:text-black">
             <i class="fab fa-github"></i>
           </a>
         </div>
-        <p>
+        <p class="text-gray-600 mb-6 text-left">
           A barangay management system for San Rafael with blotter reports, document requests, and automatic census identification.
         </p>
-        <div class="tags">
-          <span>PHP</span>
-          <span>MySQL</span>
-          <span>JavaScript</span>
+        <div class="mt-auto">
+          <span class="inline-block bg-white text-gray-700 px-3 py-1 rounded text-sm mr-2 mb-2 border border-gray-400">PHP</span>
+          <span class="inline-block bg-white text-gray-700 px-3 py-1 rounded text-sm mr-2 mb-2 border border-gray-400">MySQL</span>
+          <span class="inline-block bg-white text-gray-700 px-3 py-1 rounded text-sm mr-2 mb-2 border border-gray-400">JavaScript</span>
         </div>
-    </div>
+      </div>
 
-    <div class="project-card">
-        <div class="project-header">
-          <h3>Capstone Repository</h3>
-          <a href="" target="_blank" class="project-github-link">
+      <div class="bg-white border border-gray-200 rounded-lg p-6 transition-shadow duration-300 hover:shadow-lg flex flex-col">
+        <div class="flex justify-between items-center mb-4">
+          <h3 class="font-semibold text-gray-900 leading-snug">Capstone Repository</h3>
+          <a href="" target="_blank" class="inline-flex items-center justify-center text-2xl text-gray-700 transition-colors duration-300 hover:text-black">
             <i class="fab fa-github"></i>
           </a>
         </div>
-        <p>
+        <p class="text-gray-600 mb-6 text-left">
           NU app for viewing, uploading, and accessing capstone projects with professor approval and team verification.
         </p>
-        <div class="tags">
-          <span>Flutterflow</span>
-          <span>Supabase</span>
+        <div class="mt-auto">
+          <span class="inline-block bg-white text-gray-700 px-3 py-1 rounded text-sm mr-2 mb-2 border border-gray-400">Flutterflow</span>
+          <span class="inline-block bg-white text-gray-700 px-3 py-1 rounded text-sm mr-2 mb-2 border border-gray-400">Supabase</span>
         </div>
-    </div>
+      </div>
 
-      <div class="project-card">
-        <div class="project-header">
-          <h3>Star Topology</h3>
-          <a href="https://github.com/NotArdrey/Star-topology" target="_blank" class="project-github-link">
+      <div class="bg-white border border-gray-200 rounded-lg p-6 transition-shadow duration-300 hover:shadow-lg flex flex-col">
+        <div class="flex justify-between items-center mb-4">
+          <h3 class="font-semibold text-gray-900 leading-snug">Star Topology</h3>
+          <a href="https://github.com/NotArdrey/Star-topology" target="_blank" class="inline-flex items-center justify-center text-2xl text-gray-700 transition-colors duration-300 hover:text-black">
             <i class="fab fa-github"></i>
           </a>
         </div>
-        <p>
+        <p class="text-gray-600 mb-6 text-left">
           Interactive network simulator with visual star topology, node management, data transmission animation, and failure simulation.
         </p>
-        <div class="tags">
-          <span>HTML</span>
-          <span>CSS</span>
-          <span>JavaScript</span>
+        <div class="mt-auto">
+          <span class="inline-block bg-white text-gray-700 px-3 py-1 rounded text-sm mr-2 mb-2 border border-gray-400">HTML</span>
+          <span class="inline-block bg-white text-gray-700 px-3 py-1 rounded text-sm mr-2 mb-2 border border-gray-400">CSS</span>
+          <span class="inline-block bg-white text-gray-700 px-3 py-1 rounded text-sm mr-2 mb-2 border border-gray-400">JavaScript</span>
         </div>
-    </div>
+      </div>
  
-      <div class="project-card">
-        <div class="project-header">
-          <h3>Studio Booking</h3>
-          <a href="https://github.com/NotArdrey/Photo-Studio-Booking-System" target="_blank" class="project-github-link">
+      <div class="bg-white border border-gray-200 rounded-lg p-6 transition-shadow duration-300 hover:shadow-lg flex flex-col">
+        <div class="flex justify-between items-center mb-4">
+          <h3 class="font-semibold text-gray-900 leading-snug">Studio Booking</h3>
+          <a href="https://github.com/NotArdrey/Photo-Studio-Booking-System" target="_blank" class="inline-flex items-center justify-center text-2xl text-gray-700 transition-colors duration-300 hover:text-black">
             <i class="fab fa-github"></i>
           </a>
         </div>
-        <p>
+        <p class="text-gray-600 mb-6 text-left">
           A system to streamline the booking process for photography sessions, with admin dashboard, PayMongo payment integration, and FIFO-based booking management.
         </p>
-        <div class="tags">
-          <span>PHP</span>
-          <span>MySQL</span>
-          <span>Javascript</span>
+        <div class="mt-auto">
+          <span class="inline-block bg-white text-gray-700 px-3 py-1 rounded text-sm mr-2 mb-2 border border-gray-400">PHP</span>
+          <span class="inline-block bg-white text-gray-700 px-3 py-1 rounded text-sm mr-2 mb-2 border border-gray-400">MySQL</span>
+          <span class="inline-block bg-white text-gray-700 px-3 py-1 rounded text-sm mr-2 mb-2 border border-gray-400">Javascript</span>
         </div>
       </div>
 
-      <div class="project-card">
-        <div class="project-header">
-          <h3>Bakery Inventory</h3>
-          <a href="https://github.com/NotArdrey/Simple-Bakery-Inventory-System" target="_blank" class="project-github-link">
+      <div class="bg-white border border-gray-200 rounded-lg p-6 transition-shadow duration-300 hover:shadow-lg flex flex-col">
+        <div class="flex justify-between items-center mb-4">
+          <h3 class="font-semibold text-gray-900 leading-snug">Bakery Inventory</h3>
+          <a href="https://github.com/NotArdrey/Simple-Bakery-Inventory-System" target="_blank" class="inline-flex items-center justify-center text-2xl text-gray-700 transition-colors duration-300 hover:text-black">
             <i class="fab fa-github"></i>
           </a>
         </div>
-        <p>
+        <p class="text-gray-600 mb-6 text-left">
           A system to manage bakery product inventory using FIFO method. Supports CRUD operations with admin authentication.
         </p>
-        <div class="tags">
-          <span>PHP</span>
-          <span>MySQL</span>
-          <span>JavaScript</span>
+        <div class="mt-auto">
+          <span class="inline-block bg-white text-gray-700 px-3 py-1 rounded text-sm mr-2 mb-2 border border-gray-400">PHP</span>
+          <span class="inline-block bg-white text-gray-700 px-3 py-1 rounded text-sm mr-2 mb-2 border border-gray-400">MySQL</span>
+          <span class="inline-block bg-white text-gray-700 px-3 py-1 rounded text-sm mr-2 mb-2 border border-gray-400">JavaScript</span>
         </div>
       </div>
 
-
-      <div class="project-card">
-        <div class="project-header">
-          <h3>NU Marketplace</h3>
-          <a href="https://github.com/NotArdrey/marketplace" target="_blank" class="project-github-link">
+      <div class="bg-white border border-gray-200 rounded-lg p-6 transition-shadow duration-300 hover:shadow-lg flex flex-col">
+        <div class="flex justify-between items-center mb-4">
+          <h3 class="font-semibold text-gray-900 leading-snug">NU Marketplace</h3>
+          <a href="https://github.com/NotArdrey/marketplace" target="_blank" class="inline-flex items-center justify-center text-2xl text-gray-700 transition-colors duration-300 hover:text-black">
             <i class="fab fa-github"></i>
           </a>
         </div>
-        <p>
+        <p class="text-gray-600 mb-6 text-left">
           A web-based platform for buying and selling products online, with account management, shopping cart, and admin controls.
         </p>
-        <div class="tags">
-          <span>PHP</span>
-          <span>MySQL</span>
-          <span>JavaScript</span>
+        <div class="mt-auto">
+          <span class="inline-block bg-white text-gray-700 px-3 py-1 rounded text-sm mr-2 mb-2 border border-gray-400">PHP</span>
+          <span class="inline-block bg-white text-gray-700 px-3 py-1 rounded text-sm mr-2 mb-2 border border-gray-400">MySQL</span>
+          <span class="inline-block bg-white text-gray-700 px-3 py-1 rounded text-sm mr-2 mb-2 border border-gray-400">JavaScript</span>
         </div>
       </div>
+
     </div>
   </section>
 
-  <section class="technologies" id="technologies">
-    <h2>TECHNOLOGIES</h2>
-    <p>
-      These are the technology stacks I’ve learned over time. Each one has helped me improve my skills, build different kinds of projects, and understand how various tools work together. 
-      <div class="tech-grid">
-      <div class="tech-item">HTML</div>
-      <div class="tech-item">CSS</div>
-      <div class="tech-item">JavaScript</div>
-      <div class="tech-item">Bootstrap</div>
-      <div class="tech-item">PHP</div>
-      <div class="tech-item">MySQL</div>
-      <div class="tech-item">Firebase</div>
-      <div class="tech-item">Supabase</div>
-      <div class="tech-item">Git</div>
-      <div class="tech-item">Flutter</div>
-      <div class="tech-item">FlutterFlow</div>
-      <div class="tech-item">Python</div>
+  <section class="max-w-3xl mx-auto px-4 py-8 text-center" id="technologies">
+    <h2 class="text-3xl uppercase tracking-wide mb-4 font-bold text-gray-900">TECHNOLOGIES</h2>
+    <p class="text-base text-gray-600 mb-8 leading-relaxed text-center">
+      These are the technology stacks I've learned over time. Each one has helped me improve my skills, build different kinds of projects, and understand how various tools work together.
+    </p>
+    <div class="flex flex-wrap justify-center gap-4">
+      <div class="border border-gray-300 rounded-lg px-4 py-5 text-base font-medium text-gray-800 bg-white transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:text-black flex items-center justify-center min-w-[140px]">HTML</div>
+      <div class="border border-gray-300 rounded-lg px-4 py-5 text-base font-medium text-gray-800 bg-white transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:text-black flex items-center justify-center min-w-[140px]">CSS</div>
+      <div class="border border-gray-300 rounded-lg px-4 py-5 text-base font-medium text-gray-800 bg-white transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:text-black flex items-center justify-center min-w-[140px]">JavaScript</div>
+      <div class="border border-gray-300 rounded-lg px-4 py-5 text-base font-medium text-gray-800 bg-white transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:text-black flex items-center justify-center min-w-[140px]">Bootstrap</div>
+      <div class="border border-gray-300 rounded-lg px-4 py-5 text-base font-medium text-gray-800 bg-white transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:text-black flex items-center justify-center min-w-[140px]">PHP</div>
+      <div class="border border-gray-300 rounded-lg px-4 py-5 text-base font-medium text-gray-800 bg-white transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:text-black flex items-center justify-center min-w-[140px]">MySQL</div>
+      <div class="border border-gray-300 rounded-lg px-4 py-5 text-base font-medium text-gray-800 bg-white transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:text-black flex items-center justify-center min-w-[140px]">Firebase</div>
+      <div class="border border-gray-300 rounded-lg px-4 py-5 text-base font-medium text-gray-800 bg-white transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:text-black flex items-center justify-center min-w-[140px]">Supabase</div>
+      <div class="border border-gray-300 rounded-lg px-4 py-5 text-base font-medium text-gray-800 bg-white transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:text-black flex items-center justify-center min-w-[140px]">Git</div>
+      <div class="border border-gray-300 rounded-lg px-4 py-5 text-base font-medium text-gray-800 bg-white transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:text-black flex items-center justify-center min-w-[140px]">Flutter</div>
+      <div class="border border-gray-300 rounded-lg px-4 py-5 text-base font-medium text-gray-800 bg-white transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:text-black flex items-center justify-center min-w-[140px]">FlutterFlow</div>
+      <div class="border border-gray-300 rounded-lg px-4 py-5 text-base font-medium text-gray-800 bg-white transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:text-black flex items-center justify-center min-w-[140px]">Python</div>
     </div>
   </section>
 
-  <section class="contact-section" id="contact">
-    <h2>Contact</h2>
-    <p>Interested in collaborating or learning more about my projects? Feel free to connect through any platform below.</p>
-    <div class="contact-cards">
+  <section class="px-8 py-16 mx-auto text-center" id="contact">
+    <h2 class="text-3xl font-semibold text-gray-900 mb-4">Contact</h2>
+    <p class="text-gray-600 mb-8 text-center">Interested in collaborating or learning more about my projects? Feel free to connect through any platform below.</p>
+    <div class="flex flex-wrap justify-center gap-4 mt-8 px-4">
      
-      <a href="mailto:neilardrey14@gmail.com" class="contact-card" target="_blank">
-        <i class="fas fa-envelope contact-icon"></i>
+      <a href="mailto:neilardrey14@gmail.com" class="flex flex-col items-center justify-center text-center bg-white border border-gray-200 rounded-lg w-24 h-24 no-underline text-gray-800 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:text-black" target="_blank">
+        <i class="fas fa-envelope block text-3xl mb-2 leading-none"></i>
         <span>Email</span>
       </a>
   
-      <a href="https://github.com/NotArdrey" class="contact-card" target="_blank">
-        <i class="fab fa-github contact-icon"></i>
+      <a href="https://github.com/NotArdrey" class="flex flex-col items-center justify-center text-center bg-white border border-gray-200 rounded-lg w-24 h-24 no-underline text-gray-800 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:text-black" target="_blank">
+        <i class="fab fa-github block text-3xl mb-2 leading-none"></i>
         <span>GitHub</span>
       </a>
 
-      <a href="https://www.linkedin.com/in/neil-ardrey-laza-8a3699291/" class="contact-card" target="_blank">
-        <i class="fab fa-linkedin contact-icon"></i>
+      <a href="https://www.linkedin.com/in/neil-ardrey-laza-8a3699291/" class="flex flex-col items-center justify-center text-center bg-white border border-gray-200 rounded-lg w-24 h-24 no-underline text-gray-800 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:text-black" target="_blank">
+        <i class="fab fa-linkedin block text-3xl mb-2 leading-none"></i>
         <span>LinkedIn</span>
       </a>
    
-      <a href="https://www.facebook.com/Ardreyyyyy" class="contact-card" target="_blank">
-        <i class="fab fa-facebook contact-icon"></i>
+      <a href="https://www.facebook.com/Ardreyyyyy" class="flex flex-col items-center justify-center text-center bg-white border border-gray-200 rounded-lg w-24 h-24 no-underline text-gray-800 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:text-black" target="_blank">
+        <i class="fab fa-facebook block text-3xl mb-2 leading-none"></i>
         <span>Facebook</span>
       </a>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="footer">
-    <p>&copy; 2025 Neil Ardrey Laza. All Rights Reserved.</p>
+  <footer class="text-center p-8 text-sm text-gray-500 border-t border-gray-300">
+    <p class="text-center">&copy; 2025 Neil Ardrey Laza. All Rights Reserved.</p>
   </footer>
 
 </body>
